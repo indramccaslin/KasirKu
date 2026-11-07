@@ -47,8 +47,8 @@ jobs:
 
       - name: Sync Capacitor Android
         run: |
-          if [ ! -d android ]; then npx cap add android; fi
-          npx cap sync android
+          if [ ! -d android ]; then ./node_modules/.bin/cap add android; fi
+          ./node_modules/.bin/cap sync android
         working-directory: frontend
 
       - name: Build Debug APK
